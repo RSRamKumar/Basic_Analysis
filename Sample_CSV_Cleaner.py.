@@ -1,0 +1,13 @@
+############## This piece performs very important data cleaning in a excel file.######
+##### gene_1 afj
+##### gene_1 lajfla
+##### gene_1 ajlkfajl
+#######o/p produced as gene_1 afj,lajfla, ajlkfajl
+k={}
+f1=open('dict.csv','r')
+for i in f1:
+    k[i.split(',')[1].strip('\n')]=i.split(',')[0]
+de={}
+for j in k.values():
+    de[j] = [ i for i in k.keys() if k[i] == j]  
+    
